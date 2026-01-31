@@ -30,7 +30,7 @@
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "Smart Solution Portfolio",
-            "image": "https://okiwahyu14.github.io/logo.png",
+            "image": "https://okiwahyu14.github.io/assets/img/logo.png",
             "description": "Penyedia jasa digital marketing, web development, dan otomatisasi sistem bisnis.",
             "address": {
                 "@type": "PostalAddress",
@@ -77,74 +77,131 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
+        /* Animasi dropdown mobile */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
     </style>
 </head>
 
 <body class="bg-slate-50 text-slate-800">
 
-    <nav
-        class="flex justify-between items-center p-4 md:p-6 bg-navy text-white shadow-lg sticky top-0 z-50 border-b border-slate-800">
-        <div class="text-xl md:text-2xl font-extrabold tracking-tight">SmartSolution<span
-                class="text-navy-accent">.</span></div>
-        <div class="space-x-8 hidden md:flex text-sm font-medium">
-            <a href="#layanan" class="hover:text-navy-accent transition opacity-80 hover:opacity-100"
-                aria-label="Lihat Layanan">Layanan</a>
-            <a href="#portfolio" class="hover:text-navy-accent transition opacity-80 hover:opacity-100"
-                aria-label="Lihat Portofolio">Portofolio</a>
-            <a href="#klien" class="hover:text-navy-accent transition opacity-80 hover:opacity-100"
-                aria-label="Lihat Klien">Klien</a>
+    <nav class="relative bg-navy text-white shadow-lg sticky top-0 z-50 border-b border-slate-800">
+        <div class="flex justify-between items-center p-4 md:p-6">
+            <div class="text-xl md:text-2xl font-extrabold tracking-tight z-50">
+                SmartSolution<span class="text-navy-accent">.</span>
+            </div>
+
+            <div class="space-x-8 hidden md:flex text-sm font-medium">
+                <a href="#layanan" class="hover:text-navy-accent transition opacity-80 hover:opacity-100">Layanan</a>
+                <a href="#portfolio"
+                    class="hover:text-navy-accent transition opacity-80 hover:opacity-100">Portofolio</a>
+                <a href="#klien" class="hover:text-navy-accent transition opacity-80 hover:opacity-100">Klien</a>
+                <a href="#harga" class="hover:text-navy-accent transition opacity-80 hover:opacity-100">Harga</a>
+            </div>
+
+            <div class="flex items-center gap-3 z-50">
+                <a href="#kontak"
+                    class="bg-navy-accent text-white px-4 py-2 md:px-5 md:py-2 rounded-full font-semibold hover:bg-blue-600 transition shadow-md text-xs md:text-base">
+                    Hubungi Saya
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2 focus:outline-none text-white">
+                    <svg id="icon-menu" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="icon-close" class="hidden w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <a href="#kontak"
-            class="bg-navy-accent text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-600 transition shadow-md text-sm md:text-base">Hubungi
-            Saya</a>
+
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-navy border-t border-slate-800 shadow-xl md:hidden flex flex-col items-center py-6 space-y-6 transform origin-top">
+            <a href="#layanan" class="text-lg font-medium hover:text-navy-accent transition mobile-link">Layanan</a>
+            <a href="#portfolio"
+                class="text-lg font-medium hover:text-navy-accent transition mobile-link">Portofolio</a>
+            <a href="#harga" class="text-lg font-medium hover:text-navy-accent transition mobile-link">Harga</a>
+            <a href="#klien" class="text-lg font-medium hover:text-navy-accent transition mobile-link">Klien</a>
+        </div>
     </nav>
 
     <header class="relative h-[600px] md:h-[700px] overflow-hidden bg-navy group">
         <div id="header-track" class="flex h-full w-full absolute inset-0 transition-transform duration-500 ease-out">
+
             <div class="min-w-full h-full relative">
                 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
-                    alt="Analisis Data Digital Marketing untuk Pertumbuhan Bisnis" class="w-full h-full object-cover">
+                    alt="UMKM Go Digital" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/40 mix-blend-multiply">
                 </div>
                 <div class="absolute inset-0 flex items-center px-4 md:px-0">
                     <div class="max-w-4xl mx-auto text-center text-white z-10">
-                        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Solusi Cerdas untuk <br><span
-                                class="text-navy-accent">Pertumbuhan Bisnis</span></h1>
-                        <p class="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto font-light">Gabungan strategi
-                            data-driven dan teknologi modern untuk hasil maksimal.</p>
-                        <a href="#portfolio"
-                            class="bg-navy-accent text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-600 transition shadow-lg">Lihat
-                            Portofolio</a>
+                        <span
+                            class="inline-block py-1 px-3 rounded-full bg-orange-500 text-white text-xs font-bold tracking-wider mb-4">KHUSUS
+                            UMKM & BISNIS</span>
+                        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                            Ubah UMKM Lokal Jadi <br>
+                            <span class="text-navy-accent">Brand Global</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto font-light">
+                            Bikin website yang bekerja 24 jam mencari pelanggan untuk Anda. Tampil lebih profesional,
+                            closing lebih mudah.
+                        </p>
+                        <div class="flex flex-col md:flex-row justify-center gap-4 items-center">
+                            <a href="#harga"
+                                class="bg-navy-accent text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-600 transition shadow-lg transform hover:scale-105">
+                                Mulai dari Rp 100rb
+                            </a>
+                            <p class="text-sm text-slate-300">*Terima beres, tinggal jualan</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="min-w-full h-full relative">
                 <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop"
-                    alt="Tim Kreatif Web Design dan Branding" class="w-full h-full object-cover">
+                    alt="Website Instansi Pemerintah" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/70 to-transparent mix-blend-multiply">
                 </div>
                 <div class="absolute inset-0 flex items-center px-4 md:px-0">
                     <div class="max-w-4xl mx-auto text-center text-white z-10">
-                        <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Desain Kreatif yang <br><span
-                                class="text-navy-accent">Menjual</span></h2>
-                        <p class="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto font-light">Visual yang
-                            memukau dengan fokus pada konversi penjualan.</p>
+                        <span
+                            class="inline-block py-1 px-3 rounded-full bg-green-600 text-white text-xs font-bold tracking-wider mb-4">UNTUK
+                            INSTANSI & LEMBAGA</span>
+                        <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                            Wujudkan Layanan Publik yang <br>
+                            <span class="text-navy-accent">Transparan & Modern</span>
+                        </h2>
+                        <p class="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto font-light">
+                            Bangun kepercayaan masyarakat dengan Portal Informasi Resmi yang aman, cepat, dan mudah
+                            diakses.
+                        </p>
+                        <a href="https://wa.me/6289687143173?text=Halo%20saya%20dari%20Instansi%20ingin%20konsultasi%20website"
+                            class="bg-white text-navy px-8 py-3 rounded-lg font-bold hover:bg-slate-200 transition shadow-lg">
+                            Konsultasi Kebutuhan Instansi
+                        </a>
                     </div>
                 </div>
             </div>
+
         </div>
+
         <button id="header-prev"
-            class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-navy-accent/80 text-white p-3 rounded-full z-20 hidden md:block cursor-pointer"
-            aria-label="Previous Slide"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                stroke-width="2">
+            class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-navy-accent/80 text-white p-3 rounded-full z-20 hidden md:block cursor-pointer">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg></button>
+            </svg>
+        </button>
         <button id="header-next"
-            class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-navy-accent/80 text-white p-3 rounded-full z-20 hidden md:block cursor-pointer"
-            aria-label="Next Slide"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                stroke-width="2">
+            class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-navy-accent/80 text-white p-3 rounded-full z-20 hidden md:block cursor-pointer">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg></button>
+            </svg>
+        </button>
     </header>
 
     <div id="stats" class="bg-navy-light py-12 text-white relative border-t border-blue-800">
@@ -161,7 +218,8 @@
                     <p class="text-blue-200 text-sm uppercase">Proyek</p>
                 </div>
                 <div class="p-2">
-                    <div class="text-4xl font-extrabold text-navy-accent"><span class="counter" data-target="5">0</span>
+                    <div class="text-4xl font-extrabold text-navy-accent"><span class="counter"
+                            data-target="10">0</span>
                         Th</div>
                     <p class="text-blue-200 text-sm uppercase">Pengalaman</p>
                 </div>
@@ -177,37 +235,129 @@
     <section id="layanan" class="py-20 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-navy">Layanan Unggulan</h2>
-                <p class="text-slate-500 mt-2">Solusi komprehensif untuk kebutuhan digital Anda.</p>
+                <h2 class="text-3xl font-bold text-navy">Solusi Digital Terlengkap</h2>
+                <p class="text-slate-500 mt-2">Strategi jitu untuk meningkatkan omzet dan kredibilitas bisnis Anda.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
+
                 <div
                     class="p-8 border border-slate-200 rounded-2xl hover:shadow-xl transition group bg-slate-50 hover:bg-white hover:border-navy-accent">
-                    <div class="text-4xl mb-4">🚀</div>
-                    <h3 class="text-xl font-bold mb-2 text-navy">Digital Marketing</h3>
-                    <p class="text-slate-600 text-sm">Optimasi SEO, Google Ads, dan Social Media Management untuk ROI
-                        maksimal.</p>
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">🚀</div>
+                    <h3 class="text-xl font-bold mb-3 text-navy">Digital Marketing</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Jangan cuma posting, tapi hasilkan <strong>closing</strong>. Kami bantu bisnis Anda ditemukan
+                        calon pembeli potensial lewat Google & Sosmed dengan strategi iklan yang efektif.
+                    </p>
+                </div>
+
+                <div
+                    class="p-8 border border-slate-200 rounded-2xl hover:shadow-xl transition group bg-slate-50 hover:bg-white hover:border-navy-accent">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">🎨</div>
+                    <h3 class="text-xl font-bold mb-3 text-navy">Web & Creative Design</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Website bukan sekadar online, tapi <strong>mesin penjualan</strong> 24 jam. Kami buatkan
+                        tampilan profesional yang cepat, responsif di HP, dan bikin pelanggan langsung percaya.
+                    </p>
+                </div>
+
+                <div
+                    class="p-8 border border-slate-200 rounded-2xl hover:shadow-xl transition group bg-slate-50 hover:bg-white hover:border-navy-accent">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">🛠️</div>
+                    <h3 class="text-xl font-bold mb-3 text-navy">Maintenance & Support</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Gaptek? Tidak masalah. Fokuslah mengurus bisnis, biarkan kami yang urus teknisnya. Layanan
+                        update rutin, keamanan anti-hack, dan backup data agar website <strong>selalu aktif</strong>.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="harga" class="py-20 px-4 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-navy">Harga Pas, Website Berkualitas</h2>
+                <p class="text-slate-500 mt-2">Pilih solusi terbaik yang sesuai dengan budget dan target bisnis Anda.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <h3 class="text-lg font-bold text-slate-500 uppercase tracking-widest mb-4">Starter</h3>
+                    <div class="mb-6">
+                        <span class="text-slate-400 text-sm">Start From</span> <br>
+                        <span class="text-3xl font-bold text-navy">Rp 100.000</span>
+                    </div>
+                    <p class="text-slate-600 mb-6 text-sm">Cocok untuk UMKM atau personal branding yang baru memulai.
+                    </p>
+                    <a href="https://wa.me/6289687143173?text=Halo%20saya%20tertarik%20paket%20Starter"
+                        class="block w-full py-3 px-6 text-center rounded-lg border-2 border-navy text-navy font-bold hover:bg-navy hover:text-white transition">Pilih
+                        Starter</a>
+                    <ul class="mt-8 space-y-4 text-sm text-slate-600">
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-green-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Landing Page (One Page)</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-green-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Mobile Responsive</li>
+                    </ul>
                 </div>
                 <div
-                    class="p-8 border border-slate-200 rounded-2xl hover:shadow-xl transition group bg-slate-50 hover:bg-white hover:border-navy-accent">
-                    <div class="text-4xl mb-4">🎨</div>
-                    <h3 class="text-xl font-bold mb-2 text-navy">Web & Creative</h3>
-                    <p class="text-slate-600 text-sm">Jasa pembuatan website profesional, responsif, dan desain
-                        identitas brand.</p>
+                    class="bg-white p-8 rounded-2xl border-2 border-navy-accent shadow-2xl relative transform md:scale-105 z-10">
+                    <div
+                        class="absolute top-0 right-0 bg-navy-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                        TERLARIS</div>
+                    <h3 class="text-lg font-bold text-navy-accent uppercase tracking-widest mb-4">Business</h3>
+                    <div class="mb-6">
+                        <span class="text-slate-400 text-sm">Start From</span> <br>
+                        <span class="text-4xl font-extrabold text-navy">Rp 1.000.000</span>
+                        <span class="text-slate-400 text-sm"></span>
+                    </div>
+                    <p class="text-slate-600 mb-6 text-sm">Solusi lengkap untuk perusahaan yang ingin meningkatkan
+                        omzet.</p>
+                    <a href="https://wa.me/6289687143173?text=Halo%20saya%20tertarik%20paket%20Business"
+                        class="block w-full py-4 px-6 text-center rounded-lg bg-navy-accent text-white font-bold hover:bg-blue-600 transition shadow-lg">Pilih
+                        Business</a>
+                    <ul class="mt-8 space-y-4 text-sm text-slate-700 font-medium">
+                        <li class="flex items-center gap-3"><svg class="w-6 h-6 text-navy-accent" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Website Company Profile</li>
+                        <li class="flex items-center gap-3"><svg class="w-6 h-6 text-navy-accent" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Free Domain .com</li>
+                    </ul>
                 </div>
-                <div
-                    class="p-8 border border-slate-200 rounded-2xl hover:shadow-xl transition group bg-slate-50 hover:bg-white hover:border-navy-accent">
-                    <div class="text-4xl mb-4">⚡</div>
-                    <h3 class="text-xl font-bold mb-2 text-navy">Automation</h3>
-                    <p class="text-slate-600 text-sm">Efisiensi bisnis dengan Chatbot AI dan integrasi sistem CRM
-                        otomatis.</p>
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <h3 class="text-lg font-bold text-slate-500 uppercase tracking-widest mb-4">Custom</h3>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold text-navy">Hubungi Kami</span>
+                    </div>
+                    <p class="text-slate-600 mb-6 text-sm">Untuk kebutuhan sistem kompleks atau aplikasi web khusus.</p>
+                    <a href="https://wa.me/6289687143173?text=Halo%20saya%20ingin%20konsultasi%20paket%20Custom"
+                        class="block w-full py-3 px-6 text-center rounded-lg border-2 border-navy text-navy font-bold hover:bg-navy hover:text-white transition">Konsultasi
+                        Dulu</a>
+                    <ul class="mt-8 space-y-4 text-sm text-slate-600">
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-green-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Full Custom App</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="portfolio" class="py-20 px-4 bg-slate-100 overflow-hidden">
-        <div class="max-w-7xl mx-auto relative">
+        <div class="max-w-6xl mx-auto relative">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Portofolio Terkini</h2>
                 <p class="text-slate-600">Hasil karya nyata yang memberikan dampak signifikan bagi klien kami.</p>
@@ -216,87 +366,134 @@
             <div class="relative px-0 md:px-12">
                 <div id="portfolio-track" class="flex gap-6 transition-transform duration-500 ease-out">
 
-                    <div
-                        class="min-w-[100%] md:min-w-[calc(33.333%-16px)] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-md group">
-                        <div class="h-56 bg-slate-300 relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?q=80&w=2070&auto=format&fit=crop"
-                                alt="Jasa Pembuatan Website E-Commerce Fashion"
-                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                            <span
-                                class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full">E-Commerce</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-navy mb-2">Toko Online Fashion</h3>
-                            <p class="text-slate-500 text-sm mb-4">Optimasi kecepatan website & UI/UX untuk meningkatkan
-                                konversi.</p>
-                            <a href="#" class="text-navy-accent font-bold text-sm hover:underline">Lihat Detail →</a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="min-w-[100%] md:min-w-[calc(33.333%-16px)] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-md group">
-                        <div class="h-56 bg-slate-300 relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
-                                alt="Dashboard Keuangan Fintech"
-                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                            <span
-                                class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full">Fintech</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-navy mb-2">Dashboard Keuangan</h3>
-                            <p class="text-slate-500 text-sm mb-4">Pengembangan sistem visualisasi data real-time yang
-                                aman.</p>
-                            <a href="#" class="text-navy-accent font-bold text-sm hover:underline">Lihat Detail →</a>
+                    <div class="min-w-[100%] md:min-w-[calc(33.333%-16px)] flex-shrink-0 flex justify-center">
+                        <div
+                            class="w-full max-w-sm bg-white rounded-2xl overflow-hidden shadow-md group flex flex-col h-full border border-slate-200">
+                            <div class="h-48 bg-slate-300 relative overflow-hidden flex-shrink-0">
+                                <img src="assets/img/image.png" alt="Covid 19 Information System"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <span
+                                    class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full">System</span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-navy mb-2 line-clamp-1"
+                                    title="Covid 19 Information System">Covid 19 System</h3>
+                                <p class="text-slate-500 text-sm mb-4 break-words leading-relaxed line-clamp-3">
+                                    Sistem informasi monitoring penyebaran Covid-19 dengan statistik real-time.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div
-                        class="min-w-[100%] md:min-w-[calc(33.333%-16px)] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-md group">
-                        <div class="h-56 bg-slate-300 relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop"
-                                alt="Social Media Branding Coffee Shop"
-                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                            <span
-                                class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full">Social
-                                Media</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-navy mb-2">Branding Coffee Shop</h3>
-                            <p class="text-slate-500 text-sm mb-4">Manajemen konten Instagram & TikTok yang viral.</p>
-                            <a href="#" class="text-navy-accent font-bold text-sm hover:underline">Lihat Detail →</a>
+                    <div class="min-w-[100%] md:min-w-[calc(33.333%-16px)] flex-shrink-0 flex justify-center">
+                        <div
+                            class="w-full max-w-sm bg-white rounded-2xl overflow-hidden shadow-md group flex flex-col h-full border border-slate-200">
+                            <div class="h-48 bg-slate-300 relative overflow-hidden flex-shrink-0">
+                                <img src="assets/img/mpkupro.png" alt="Data Center MPKU"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <span
+                                    class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full">Data
+                                    Center</span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-navy mb-2 line-clamp-1"
+                                    title="Data Center MPKU PP Muhammadiyah">Data Center MPKU</h3>
+                                <p class="text-slate-500 text-sm mb-4 break-words leading-relaxed line-clamp-3">
+                                    Sistem Kesehatan terintegrasi untuk jaringan MPKU PP Muhammadiyah.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div
-                        class="min-w-[100%] md:min-w-[calc(33.333%-16px)] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-md group">
-                        <div class="h-56 bg-slate-300 relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1555421689-d68471e18963?q=80&w=2070&auto=format&fit=crop"
-                                alt="Aplikasi Web Cloud System"
-                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                            <span
-                                class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full">Web
-                                App</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-navy mb-2">Sistem Gudang Cloud</h3>
-                            <p class="text-slate-500 text-sm mb-4">Aplikasi manajemen stok otomatis berbasis cloud.</p>
-                            <a href="#" class="text-navy-accent font-bold text-sm hover:underline">Lihat Detail →</a>
+                    <div class="min-w-[100%] md:min-w-[calc(33.333%-16px)] flex-shrink-0 flex justify-center">
+                        <div
+                            class="w-full max-w-sm bg-white rounded-2xl overflow-hidden shadow-md group flex flex-col h-full border border-slate-200">
+                            <div class="h-48 bg-slate-300 relative overflow-hidden flex-shrink-0">
+                                <img src="assets/img/mpkupro2.png" alt="Sistem Informasi Akreditasi"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <span
+                                    class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full">Akreditasi</span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-navy mb-2 line-clamp-1">Sistem Informasi Akreditasi
+                                </h3>
+                                <p class="text-slate-500 text-sm mb-4 break-words leading-relaxed line-clamp-3">
+                                    Platform digital manajemen dokumen penilaian Akreditasi Rumah Sakit.
+                                </p>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="min-w-[100%] md:min-w-[calc(33.333%-16px)] flex-shrink-0 flex justify-center">
+                        <div
+                            class="w-full max-w-sm bg-white rounded-2xl overflow-hidden shadow-md group flex flex-col h-full border border-slate-200">
+                            <div class="h-48 bg-slate-300 relative overflow-hidden flex-shrink-0">
+                                <img src="assets/img/pdmpro.png" alt="Sistem Informasi Manajemen Anggaran"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <span
+                                    class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full">Finance</span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-navy mb-2 line-clamp-1"
+                                    title="Sistem Informasi Manajemen Anggaran">Sistem Informasi Anggaran</h3>
+                                <p class="text-slate-500 text-sm mb-4 break-words leading-relaxed line-clamp-3">
+                                    Sistem Manajemen Anggaran Sekolah Muhammadiyah Kota Yogyakarta.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="min-w-[100%] md:min-w-[calc(33.333%-16px)] flex-shrink-0 flex justify-center">
+                        <div
+                            class="w-full max-w-sm bg-white rounded-2xl overflow-hidden shadow-md group flex flex-col h-full border border-slate-200">
+                            <div class="h-48 bg-slate-300 relative overflow-hidden flex-shrink-0">
+                                <img src="assets/img/pdmpro2.png" alt="Sistem Informasi Manajemen Anggaran"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <span
+                                    class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full">Finance</span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-navy mb-2 line-clamp-1"
+                                    title="Sistem Informasi Manajemen Anggaran">Sistem Informasi Keuangan Sekolah</h3>
+                                <p class="text-slate-500 text-sm mb-4 break-words leading-relaxed line-clamp-3">
+                                    Sistem Manajemen Keuangan Sekolah.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="min-w-[100%] md:min-w-[calc(33.333%-16px)] flex-shrink-0 flex justify-center">
+                        <div
+                            class="w-full max-w-sm bg-white rounded-2xl overflow-hidden shadow-md group flex flex-col h-full border border-slate-200">
+                            <div class="h-48 bg-slate-300 relative overflow-hidden flex-shrink-0">
+                                <img src="assets/img/paypro.png" alt="Sistem Informasi Manajemen Anggaran"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <span
+                                    class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full">Finance</span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-navy mb-2 line-clamp-1"
+                                    title="Sistem Informasi Manajemen Anggaran">Sistem Informasi Keuangan Panti Asuhan
+                                </h3>
+                                <p class="text-slate-500 text-sm mb-4 break-words leading-relaxed line-clamp-3">
+                                    Sistem Manajemen Keuangan Pantiasuhan.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <button id="port-prev"
-                    class="absolute left-0 top-1/2 -translate-y-1/2 bg-navy text-white p-3 rounded-full shadow-lg hover:bg-navy-accent transition z-10 md:left-2"
-                    aria-label="Previous Portfolio"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
+                    class="absolute left-0 top-1/2 -translate-y-1/2 bg-navy text-white p-3 rounded-full shadow-lg hover:bg-navy-accent transition z-10 md:left-2 cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg></button>
+                    </svg>
+                </button>
                 <button id="port-next"
-                    class="absolute right-0 top-1/2 -translate-y-1/2 bg-navy text-white p-3 rounded-full shadow-lg hover:bg-navy-accent transition z-10 md:right-2"
-                    aria-label="Next Portfolio"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
+                    class="absolute right-0 top-1/2 -translate-y-1/2 bg-navy text-white p-3 rounded-full shadow-lg hover:bg-navy-accent transition z-10 md:right-2 cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg></button>
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
@@ -306,26 +503,17 @@
             <h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">Dipercaya oleh Instansi &
                 Perusahaan Ternama</h2>
             <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-70">
-                <div class="flex justify-center grayscale hover:grayscale-0 transition duration-300 cursor-pointer">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
-                        alt="Google Partner" class="h-8 md:h-10 object-contain">
+                <div class="flex justify-center grayscale hover:grayscale-0 transition duration-300 cursor-pointer"><img
+                        src="assets/img/usaid.jpg" alt="USAID" class="h-8 md:h-10 object-contain"></div>
+                <div class="flex justify-center grayscale hover:grayscale-0 transition duration-300 cursor-pointer"><img
+                        src="assets/img/mpku.png" alt="MPKU PP Muhammadiyah" class="h-8 md:h-10 object-contain"></div>
+                <div class="flex justify-center grayscale hover:grayscale-0 transition duration-300 cursor-pointer"><img
+                        src="assets/img/pdm.png" alt="PDM Kota Yogyakarta" class="h-8 md:h-10 object-contain"></div>
+                <div class="flex justify-center grayscale hover:grayscale-0 transition duration-300 cursor-pointer"><img
+                        src="assets/img/pku.png" alt="RS PKU Muhammadiyah Gamping" class="h-8 md:h-10 object-contain">
                 </div>
-                <div class="flex justify-center grayscale hover:grayscale-0 transition duration-300 cursor-pointer">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
-                        alt="Amazon AWS Partner" class="h-8 md:h-10 object-contain">
-                </div>
-                <div class="flex justify-center grayscale hover:grayscale-0 transition duration-300 cursor-pointer">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
-                        alt="Microsoft Certified" class="h-8 md:h-10 object-contain">
-                </div>
-                <div class="flex justify-center grayscale hover:grayscale-0 transition duration-300 cursor-pointer">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
-                        alt="Netflix Client" class="h-8 md:h-10 object-contain">
-                </div>
-                <div class="flex justify-center grayscale hover:grayscale-0 transition duration-300 cursor-pointer">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png"
-                        alt="Samsung Enterprise" class="h-8 md:h-10 object-contain">
-                </div>
+                <div class="flex justify-center grayscale hover:grayscale-0 transition duration-300 cursor-pointer"><img
+                        src="assets/img/pay.png" alt="Panti Asuhan Putri" class="h-8 md:h-10 object-contain"></div>
             </div>
         </div>
     </section>
@@ -334,8 +522,7 @@
         <h2 class="text-3xl font-bold mb-6">Siap untuk Transformasi Bisnis?</h2>
         <p class="text-blue-200 mb-8 max-w-xl mx-auto">Dapatkan penawaran khusus untuk jasa website dan digital
             marketing bulan ini.</p>
-
-        <a href="https://wa.me/62812345678"
+        <a href="https://wa.me/6289687143173"
             class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center gap-3 shadow-lg mb-12 transform hover:scale-105 transition">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path
@@ -344,20 +531,17 @@
             Chat via WhatsApp
         </a>
         <div class="flex justify-center gap-6 mb-8">
-            <a href="#" aria-label="LinkedIn"
-                class="text-blue-200 hover:text-white transition transform hover:scale-110"><svg class="w-8 h-8"
+            <a href="#" class="text-blue-200 hover:text-white transition transform hover:scale-110"><svg class="w-8 h-8"
                     fill="currentColor" viewBox="0 0 24 24">
                     <path
                         d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg></a>
-            <a href="#" aria-label="Instagram"
-                class="text-blue-200 hover:text-white transition transform hover:scale-110"><svg class="w-8 h-8"
+            <a href="#" class="text-blue-200 hover:text-white transition transform hover:scale-110"><svg class="w-8 h-8"
                     fill="currentColor" viewBox="0 0 24 24">
                     <path
-                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.148-3.204 1.658-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.148-3.204 1.658-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                 </svg></a>
-            <a href="#" aria-label="GitHub"
-                class="text-blue-200 hover:text-white transition transform hover:scale-110"><svg class="w-8 h-8"
+            <a href="#" class="text-blue-200 hover:text-white transition transform hover:scale-110"><svg class="w-8 h-8"
                     fill="currentColor" viewBox="0 0 24 24">
                     <path
                         d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -369,7 +553,34 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-            // 1. COUNTER ANIMATION
+            // --- 0. MOBILE MENU TOGGLE (BARU) ---
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconMenu = document.getElementById('icon-menu');
+            const iconClose = document.getElementById('icon-close');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    // Toggle visibility
+                    mobileMenu.classList.toggle('hidden');
+
+                    // Toggle icons
+                    iconMenu.classList.toggle('hidden');
+                    iconClose.classList.toggle('hidden');
+                });
+
+                // Tutup menu otomatis saat link diklik
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        iconMenu.classList.remove('hidden');
+                        iconClose.classList.add('hidden');
+                    });
+                });
+            }
+
+            // --- 1. COUNTER ANIMATION ---
             const counters = document.querySelectorAll('.counter');
             const speed = 250;
             const animateCounters = () => {
@@ -397,7 +608,7 @@
             const statsSection = document.querySelector('#stats');
             if (statsSection) observer.observe(statsSection);
 
-            // 2. HEADER CAROUSEL (HERO)
+            // --- 2. HEADER CAROUSEL (HERO) ---
             const hTrack = document.getElementById('header-track');
             const hSlides = Array.from(hTrack.children);
             const hNext = document.getElementById('header-next');
@@ -420,7 +631,7 @@
             }
             let hAuto = setInterval(nextHeader, 5000);
 
-            // 3. PORTFOLIO CAROUSEL
+            // --- 3. PORTFOLIO CAROUSEL ---
             const pTrack = document.getElementById('portfolio-track');
             const pItems = pTrack.children;
             const pNext = document.getElementById('port-next');
